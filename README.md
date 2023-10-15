@@ -53,3 +53,7 @@ Remember, we need two tasks. One to switch to dark mode, and another to switch f
 **NOTE**: This light mode automation sets the taskbar to dark mode, which is my preference. Alternatively if you want the taskbar to be light mode too you can paste this in the arguments instead:
 
 > `New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 1 -Type Dword -Force; New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 1 -Type Dword -Force`
+
+## Extra Options
+
+You might have specifc behaviour you prefer, such as hiding the task bar automatically and other things like that. It's likely that these scripts will overwrite those preferences. As such, I'd recommend asking ChatGPT to add those conditions to the `Add arguments` script, just be sure use to the exact lettering/wording used in the Windows Settings
