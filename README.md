@@ -1,6 +1,6 @@
 # windows-automated-light-dark-mode
 
-It's quite convoluted to set light/dark mode on Windows, so here's a simple way to manage that:
+It's quite convoluted to set a scheduled light/dark mode on Windows, so here's a simple way to manage that:
 
 > Search `Task Scheduler`
 
