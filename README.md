@@ -13,24 +13,38 @@ Remember, we need two tasks. One to switch to dark mode, and another to switch f
 
 > Name the task `switchToDarkMode`
 > In `General` select `Run whether user is logged on or not` and tick `Do not store password`
+
 > Check the box to `Configure for Windows 10` (or whatever OS you're using)
-> Click `Triggers`, make sure it's set to `On a schedule`
-> Check the box `Daily` and set your start date and time
+> Click `Triggers`, make sure it's set to `On a schedule
+
+> Check the box `Daily` and set your start date and tim
+
 > Click `Actions` and make sure its set to `Start a program`
+
 > In `Program/script` we need to paste in: `%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe`
+
 > In `Add arguments` we need to paste in: `:New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0 -Type Dword -Force; New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0 -Type Dword -Force`
+
 > Click `Settings` and check `Run task as soon as possible after a scheduled start is missed` and `If the task fails, restart`. This just solves any sleep mode problems
 
 ## Light Mode Automation
 
 > Name the task `switchToLightMode`
+
 > In `General` select `Run whether user is logged on or not` and tick `Do not store password`
+
 > Check the box to `Configure for Windows 10` (or whatever OS you're using)
+
 > Click `Triggers`, make sure it's set to `On a schedule`
+
 > Check the box `Daily` and set your start date and time
+
 > Click `Actions` and make sure its set to `Start a program`
+
 > In `Program/script` we need to paste in: `%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe`
+
 > In `Add arguments` we need to paste in: `New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0 -Type Dword -Force; New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 1 -Type Dword -Force`
+
 > Click `Settings` and check `Run task as soon as possible after a scheduled start is missed` and `If the task fails, restart`. This just solves any sleep mode problems
 
 **NOTE**: This light mode automation sets the taskbar to dark mode, which is my preference. Alternatively if you want the taskbar to be light mode too you can paste this in the arguments instead:
