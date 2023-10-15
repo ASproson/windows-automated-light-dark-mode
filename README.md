@@ -3,8 +3,11 @@
 It's quite convoluted to set light/dark mode on Windows, so here's a simple way to manage that:
 
 > Search `Task Scheduler`
+
 > Click `Task Scheduler Library`
+
 > Click `New Folder...` and name it Night Mode (or whatever you like, this is where we store our schedule tasks)
+
 > Click your new folder and then click `Create Task`
 
 Remember, we need two tasks. One to switch to dark mode, and another to switch from dark mode back to light mode. We'll start with the switch to dark mode
