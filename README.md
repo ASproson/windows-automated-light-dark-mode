@@ -20,7 +20,7 @@ Remember, we need two tasks. One to switch to dark mode, and another to switch f
 
 > Check the box to `Configure for Windows 10` (or whatever OS you're using)
 
-> Click `Triggers`, make sure it's set to `On a schedule
+> Click `Triggers`, make sure it's set to `On a schedule`
 
 > Check the box `Daily` and set your start date and tim
 
